@@ -94,8 +94,8 @@ fun editListWithObject(
     itemToEdit: shoppingItem,
     newItem: shoppingItem
 ): List<shoppingItem> {
-    return originalList.map { item ->
-        if (item == itemToEdit) newItem else item
+    return originalList.map { i ->
+        if (i == itemToEdit) newItem else i
     }
 }
 
