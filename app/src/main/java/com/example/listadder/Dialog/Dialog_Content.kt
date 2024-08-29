@@ -9,14 +9,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
+//Should add default value to make the Preview work for debug
 fun AddItemDialogContent(
-    name: String = "", // Provide default values for preview
-    onNameChange: (String) -> Unit = {},
-    nameError: Boolean = false,
+    name: String = " ", // Provide default values for preview
+    onNameChange: (String) -> Unit = {},//Pass the function to the composable by default is Null
+    nameError: Boolean = true,
     quality: String = "",
     onQualityChange: (String) -> Unit = {},
     qualityError: Boolean = false,
-    qualityTextError: String = ""
+    qualityTextError: String = " "
 ) {
     Column {
         InputField(
@@ -40,7 +41,6 @@ fun AddItemDialogContent(
         )
     }
 }
-
 @Preview(showBackground = true)
 @Composable
 fun AddItemDialog() {

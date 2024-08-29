@@ -24,7 +24,6 @@ data class shoppingItem(val name: String, val amount: Double) {
     companion object {
         @Composable
         fun Template(shoppingItem: shoppingItem, edit: () -> Unit, delete: () -> Unit) {
-
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
